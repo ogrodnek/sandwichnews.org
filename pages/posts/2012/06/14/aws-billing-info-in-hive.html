@@ -1,0 +1,49 @@
+title: AWS Billing Info in Hive
+date: 06-14-2012
+tags: tech, aws
+
+{% extends "post.html" %}
+{% block body %}
+
+{% filter markdown %}
+
+
+Amazon recently (finally!) launched 
+[programmatic access to your AWS billing data](http://docs.amazonwebservices.com/awsaccountbilling/latest/about/programaccess.html). 
+
+Once you turn it on, select a bucket, grant access to the AWS system user, you'll get a .csv file with your estimated billing for the month.  The files are delivered daily, but they contain month-to-date information, and will replace the file from the previous day. 
+
+It's easy enough to view this information in excel (or similar), but I thought it would be fun to take a look in hive, especially once we start having data for a few months to aggregate over. 
+Amazon delivers the data to the root of your bucket.  I decided to start moving it to a hive-partitioned path, to make it easier to query once we start have more data.  I wrote a simple scala script to move the data to 
+[bucket]/partioned/year=[year]/month=[month]/[file]. Here's [some example code](https://gist.github.com/2933771). 
+
+Ok, now we're ready to read the data in Hive. 
+
+Here's a [hive schema for the AWS billing information](https://gist.github.com/2933779). It uses the 
+[csv-serde](https://github.com/ogrodnek/csv-serde) (make sure you add that jar before running the create table statement). Run 
+<code>alter table aws_billing recover partitions;</code> to load in the partitions (one per year/month), and you're ready to query. 
+
+Like I said, it's overkill to use hive to read this data for a month or so, but it's just so addictive having a SQL interface to arbitrary S3 data :).
+
+Here are some example queries to get you started. 
+
+### Costs by Service
+  
+    select ProductCode, UsageType, Operation, sum(TotalCost)
+      from aws_billing
+     where RecordType in ("PayerLineItem", "LinkedLineItem")
+     group
+        by ProductCode, UsageType, Operation; 
+
+
+### EC2 usage, by size (across EC2/EMR)
+  
+    select ProductCode, UsageType, sum(TotalCost)
+      from aws_billing
+     where RecordType in ("PayerLineItem", "LinkedLineItem")
+       and UsageType like "BoxUsage%"
+     group
+        by ProductCode, UsageType;
+
+{% endfilter %}
+{% endblock body %}
