@@ -7,6 +7,15 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+pre {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+li {
+	margin-top: 5px;
+}
+
 
 #main-header {
   background-color: #eb6864;
