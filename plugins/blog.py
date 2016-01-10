@@ -9,7 +9,7 @@ from django.template.loader_tags import BlockNode, ExtendsNode
 Global = {"config": {}, "posts": [] }
 
 Global["config"]["path"] = "posts"
-Global["config"]["date_format"] = "%m-%d-%Y"
+Global["config"]["date_format"] = "%m-%d-%Y %I:%M%p"
 Global["config"]["post_body_block"] = "body"
 
 

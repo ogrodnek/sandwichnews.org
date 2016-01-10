@@ -10,7 +10,7 @@
   		<title>{{ post.title | force_escape }}</title>
   		<link>http://sandwichnews.org/{{ post.path }}</link>
   		<guid isPermaLink="false">{{ post.path }}</guid>
-  		<pubDate>{{ post.date|date:"c" }}</pubDate>
+  		<pubDate>{{ post.date|date:"r" }}</pubDate>
   		<description>{{ post.body | force_escape }}</description>
   	</item>
     {% endfor %}
