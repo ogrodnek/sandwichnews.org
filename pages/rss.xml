@@ -1,0 +1,18 @@
+<rss version="2.0">
+  <channel>
+  	<title>Sandwich News</title>
+  	<link>http://sandwichnews.org</link>
+  	<description>
+  		The intersection of sandwiches, technology &amp; beer culture
+  	</description>
+  	{% for post in posts %}
+  	<item>
+  		<title>{{ post.title | force_escape }}</title>
+  		<link>http://sandwichnews.org/{{ post.path }}</link>
+  		<guid isPermaLink="false">{{ post.path }}</guid>
+  		<pubDate>{{ post.date|date:"c" }}</pubDate>
+  		<description>{{ post.body | force_escape }}</description>
+  	</item>
+    {% endfor %}
+  </channel>
+</rss>
