@@ -14,7 +14,7 @@ Global["config"]["post_body_block"] = "body"
 
 
 def preBuild(site):
-	
+
 	global Global
 
 	# Check if the posts path exists
@@ -24,9 +24,9 @@ def preBuild(site):
 		logging.warning("No posts folder found at: %s", page_path)
 
 	for page in site.pages():
-		
+
 		if page.path.startswith("%s/" % Global["config"]["path"]):
-			
+
 			if not page.path.endswith('.html'):
 				continue
 
@@ -35,13 +35,16 @@ def preBuild(site):
 			context = page.context()
 			context_post = {"path": page.path}
 
+			if context.has_key('draft'):
+				continue
+
 			# Check if we have the required keys
 			for field in ["title", "date", "tags"]:
-				
+
 				if not context.has_key(field):
 					logging.warning("Page %s is missing field: %s" % (page.path, field))
 				else:
-					
+
 					if field == "date":
 						context_post[field] = _convertDate(context[field], page.path)
 					elif field == "tags":
@@ -56,11 +59,11 @@ def preBuild(site):
 
 			# Add the post contents
 			context_post["body"] = _get_node(
-				get_template(page.path), 
-				context=temp_post_context, 
+				get_template(page.path),
+				context=temp_post_context,
 				name=Global["config"]["post_body_block"])
-                
-            
+
+
 
 			Global["posts"].append(context_post)
 
@@ -69,20 +72,20 @@ def preBuild(site):
 	Global["posts"].reverse()
 
 	indexes = xrange(0, len(Global["posts"]))
-	
+
 	for i in indexes:
 		if i+1 in indexes: Global["posts"][i]['prevPost'] = Global["posts"][i+1]
 		if i-1 in indexes: Global["posts"][i]['nextPost'] = Global["posts"][i-1]
 
 
 def preBuildPage(site, page, context, data):
-	
+
 	context['posts'] = Global["posts"]
-	
+
 	for post in Global["posts"]:
 		if post["path"] == page.path:
 			context.update(post)
-	
+
 	return context, data
 
 
@@ -90,8 +93,8 @@ def preBuildPage(site, page, context, data):
 
 def _convertDate(date_string, path):
 	# Convert a string to a date object
-	try: 
-		return datetime.datetime.strptime(date_string, 
+	try:
+		return datetime.datetime.strptime(date_string,
 			Global["config"]["date_format"])
 	except Exception, e:
 		logging.warning("Date format not correct for page %s, should be %s\n%s" \
