@@ -3,13 +3,7 @@ date: 2018-05-31T16:50:00
 tags: [photography]
 photo: /static/images/posts/2018/05/25/large-format-junkyard/junkyard-104.jpg
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/05/25/large-format-junkyard/junkyard-104.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">paper and acrylic detail, junkyard, 2018</i> 
-</p>
- 
+![paper and acrylic detail, junkyard, 2018](/static/images/posts/2018/05/25/large-format-junkyard/junkyard-104.jpg)
 
 I had become interested in large format photography after a workshop with [Daniel Carrillo](http://www.daniel-carrillo.com/) on Wet Plate.
 
@@ -21,23 +15,8 @@ Here are some 11x14 darkroom prints from a recent junkyard trip (a mix of Ilford
 
 I've really been enjoying the process.  While there are still frustrations, after repeated practice things are a lot smoother.  I really love the simplicity and thoughtful intention that seems to come with shooting large format.
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/05/25/large-format-junkyard/junkyard-102.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">stack of bumpers, junkyard, 2018</i> 
-</p>
- 
- <p>
-<img class="img-responsive"
- src="/static/images/posts/2018/05/25/large-format-junkyard/junkyard-103.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">dashboard, junkyard, 2018</i> 
-</p>
+![stack of bumpers, junkyard, 2018](/static/images/posts/2018/05/25/large-format-junkyard/junkyard-102.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/05/25/large-format-junkyard/junkyard-106.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">portrait of a door, junkyard, 2018</i> 
-</p>
+![dashboard, junkyard, 2018](/static/images/posts/2018/05/25/large-format-junkyard/junkyard-103.jpg)
+
+![portrait of a door, junkyard, 2018](/static/images/posts/2018/05/25/large-format-junkyard/junkyard-106.jpg)

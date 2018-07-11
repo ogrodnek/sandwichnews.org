@@ -7,17 +7,12 @@ from flask_frozen import Freezer
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
-FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']
+FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'imagecaption']
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
-
-
-for p in pages:
-  print p.meta
-
 
 @app.route('/')
 def index():

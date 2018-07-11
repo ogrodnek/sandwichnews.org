@@ -3,9 +3,8 @@ date: 2016-08-09T21:09:00
 tags: [photography, alt-process]
 photo: /static/images/posts/2016/08/09/hand-coated-photography/28779416942_0871210132.jpg
 
-<a href="https://www.flickr.com/photos/logrodnek/albums/72157672241163415">
-  <img class="img-responsive" src="/static/images/posts/2016/08/09/hand-coated-photography/28779416942_0871210132.jpg" />
-</a>
+
+![Sedro Wolley Barn, Van Dyke Print](/static/images/posts/2016/08/09/hand-coated-photography/28779416942_0871210132.jpg)
 
 This past weekend I was fortunate enough to take a workshop on some historical photo
 processes at [pcnw](http://pcnw.org).
@@ -23,9 +22,8 @@ As a 'modern' photographer, I hate to admit that I like even the visible brush m
 really do!
 
 ### Cyanotypes
- <a href="https://www.flickr.com/photos/logrodnek/albums/72157672241163415">
-  <img class="img-responsive" src="/static/images/posts/2016/08/09/hand-coated-photography/28266906494_a204e42d95.jpg" />
-</a>
+
+![Sedro Wolley Barn, Cyanotype Print](/static/images/posts/2016/08/09/hand-coated-photography/28266906494_a204e42d95.jpg)
 
 The cyanotype process is especially interesting to me.  This was originally used
 for reproducing drawings, and is how [blueprints](https://en.wikipedia.org/wiki/Blueprint)

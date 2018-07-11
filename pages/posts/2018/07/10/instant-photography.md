@@ -3,12 +3,9 @@ date: 2018-07-10T13:45:00
 tags: [photography]
 photo: /static/images/posts/2018/07/10/instax.jpg
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax.jpg)
+
 
 I recently bought a [cheap Fuji instax camera](https://amzn.to/2znoG0p) for an upcoming road trip.  I had been wanting to try out the instax film and I thought my 6 year old daughter would have fun documenting the trip with me.
 
@@ -23,79 +20,24 @@ My daughter shot most of the color film right away, but wanted nothing to do wit
 I took the camera out on a photowalk with a friend to [Centennial Park](https://www.portseattle.org/places/centennial-park) here in Seattle and I was pretty happy with the results.  The black and white is a little high contrast, but it has a good look.
 
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-100.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-100.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-101.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-101.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-102.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-102.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-103.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-103.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-104.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-104.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-105.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-105.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-106.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-106.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-107.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-107.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-108.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-108.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-109.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-109.jpg)
 
-<p>
-<img class="img-responsive"
- src="/static/images/posts/2018/07/10/instax-110.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">near centennial park, seattle, 2018</i>
-</p>
+![near centennial park, seattle, 2018](/static/images/posts/2018/07/10/instax-110.jpg)

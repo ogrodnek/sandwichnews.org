@@ -3,11 +3,7 @@ date: 2017-07-07T11:20:00
 tags: [photography,alt-process]
 photo: /static/images/posts/2017/07/raspberry-anthotypes/35789893805_c1b0bc5ae7.jpg
 
-<p>
-  <img class="img-responsive" src="/static/images/posts/2017/07/raspberry-anthotypes/35789893805_c1b0bc5ae7.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">Raspberry anthotype print, 3 days exposure</i>
-</p>
+![Raspberry anthotype print, 3 days exposure](/static/images/posts/2017/07/raspberry-anthotypes/35789893805_c1b0bc5ae7.jpg)
 
 I've been paging through the excellent
 [Book of Alternative Photographic Processes](https://www.amazon.com/Book-Alternative-Photographic-Processes/dp/1285089316/?tag=engcoffee-20)
@@ -36,26 +32,17 @@ but basically:
     - a clip photo frame will help keep everything in place
 - put it in the sun, and wait!
 
-<p>
-  <img class="img-responsive" src="/static/images/posts/2017/07/raspberry-anthotypes/34981034903_b0a4b3ca3e.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">Raspberry anthotype prints, in progress</i>
-</p>
+![Raspberry anthotype prints, in progress](/static/images/posts/2017/07/raspberry-anthotypes/34981034903_b0a4b3ca3e.jpg)
 
 Exposure times seem to vary greatly depending on the plant material used.
 
 For my prints, I used raspberry with some alcohol and put them out in the sun for 3 full days.
 They probably could have used another day or two, but I got impatient.
 
-<p>
-  <img class="img-responsive" src="/static/images/posts/2017/07/raspberry-anthotypes/35658008121_5742e14377.jpg" />
-  <br />
-  <i style="font-size: 0.75em;">Raspberry anthotype print</i>
-</p>
+![Raspberry anthotype print](/static/images/posts/2017/07/raspberry-anthotypes/35658008121_5742e14377.jpg)
 
 As far as I know, there's no known way to fix the images (make them permanent).
 Over time and with more UV exposure the images will eventually fade.
-
 
 Anthotypes are a very old process (1842), but they never became that popular because of
 the long exposure times and image impermanence - there's still a lot to explore!
