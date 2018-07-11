@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sandwich news</title>
+  <link rel="shortcut icon" href="/static/images/sandwich-black.png">	
+  <link rel="stylesheet" href="/static/css/blog.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">  
+	<link rel="alternate" type="application/rss+xml" title="My Blog Feed" href="/rss.xml">
+  <style type="text/css">
+
+   </style>
+</head>
+<body class="w-100 sans-serif bg-white">
+  <main>
+    <div data-name="component" > <!-- style="background-color: #eb6864"> -->
+      <nav class="dt w-100 border-box pa2 ph5-ns">
+         <a class="dtc v-mid white link dim w-25" href="/" title="Home">
+           <img src="/static/images/sandwich-black.png" class="dib w2 h2 br-100" alt="Site Name">
+         </a>
+         <div class="dtc v-mid w-75 tr">
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/technology/" title="Technology">technology</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/technology/" title="Technology">tech 💻</a>           
+
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/photography/" title="Photography">photography</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/photography/" title="Photography">photo 📷</a>
+           
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/sandwich/" title="Sandwiches">sandwiches</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/sandwich/" title="Sandwiches">`wich 🍞</a>
+         </div>
+      </nav>
+  </div>
+  
+<article class="">
+    <header style="background-color: rgba(0, 3, 0, 0.03)"
+    class="aventir ph3 ph4-ns pv1 pv2-ns">
+        <h1 class="f3 fw8 f2-m f1-l mb2">
+          Pushing bytes is expensive</h1>
+        <time class="f5 f4-l db fw4 mb4">
+          March 16, 2016
+        </time>
+      </header>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+    <p>In this post I'll be comparing cloud hosting costs, which I'm sure will be hopelessly out of date in just a few months.</p>
+<p>I'm writing this post to try to solicit feedback on cheaper file transfer options.  If you have any advice or feedback, I'd love to hear about it!</p>
+<p>Maybe it should have been obvious, but I've been somewhat surprised at the high cost of transfer vs. storage when you start talking 10s of terabytes.</p>
+<p>For example, storing 10TB of data in S3: $302.60, transferring 10TB of data out of S3: $921.51.</p>
+<p>I've also been (pleasantly) surprised at how aggressive the AWS/CloudFront (CDN) pricing is -- at $0.085/GB (US only), it appears to be the cheapest way to get data out of AWS.  It's cheaper than both S3 directly ($0.09) and even cheaper than serving directly from an EC2 instance (also $0.09).  This is kind of amazing considering all the benefits of the CF service vs. doing it yourself, or even S3.</p>
+<p>I've been working out the details for a SaaS app that doesn't use a lot of storage, but has the potential to have a lot of subscribers.  So, it will use say 200MB of storage, but need to serve that data potentially 50,000 times each month.  The S3 costs are neglible, a few cents, but even the cheapeast CF tier (US only), we are talking $870.40/month.</p>
+<p>I love the CloudFront feature set and service and will continue to use it where it makes sense.</p>
+<p>For this app, I will have a hard time being competitive with other apps in this space with those costs, so I've been looking for cheaper solutions.  Below is a list of what I've compiled.  I'm not considering any "free tiers" for the comparison.  These are great for development/etc., but I think not relevant in an ongoing cost comparison.</p>
+<table class="table">
+  <tr><th>Provider</th><th>Transfer Cost/GB</th></tr>
+
+  <tr><td>AWS/CloudFront (US)</td><td><a href="https://aws.amazon.com/cloudfront/pricing/">$0.085</a></td></tr>
+  <tr><td>AWS/S3 (us-east)</td><td><a href="https://aws.amazon.com/s3/pricing/">$0.09</a></td></tr>
+  <tr><td>AWS/EC2</td><td><a href="https://aws.amazon.com/ec2/pricing/">$0.09</a></td></tr>
+
+  <tr><td>Google Cloud Storage</td><td><a href="https://cloud.google.com/storage/pricing">$0.12</a></td></tr>
+  <tr><td>BackBlaze/B2</td><td><a href="https://www.backblaze.com/b2/cloud-storage-pricing.html">$0.05</a></td></tr>
+</table>
+
+<h3>Other Options</h3>
+<h4>CloudFlare</h4>
+<p>CloudFlare is a pretty full featured CDN that actually even offers a "free" tier.</p>
+<p>I signed up for a "pro" account to test it out.  The problem is that even for the pro and business levels, there's absolutely no record provided of file access.  That requires an Enterprise/Custom plan, where the pricing is determined by the sales team.  I haven't yet made a call to a sales rep to determine what final pricing would be for my use case.</p>
+<p>The other tricky thing here is that I still need to separately maintain and pay for an origin, the costs of which are entirely determined by how effectively CloudFlare can cache my content.  What I mean is, if I put CloudFlare in front of CloudFront, and I'm only getting 50% hit rate from CloudFlare, I'm still paying for $435/month from CloudFront on top of what I'm paying from CloudFlare (that's a lot of CFs).</p>
+<h4>Digital Ocean</h4>
+<p>From what I can tell, they don't offer a straight cloud storage solution, but their "Most Popular" plan features 3TB of data transfer included for $20/month.</p>
+<p>This works out to $0.00666/GB.  Of course, I would like some basic redudency, so, say two machines and a load balancer, works out to about $0.01/GB/month? (($20*3)/6000), which is by far the cheapest I've seen.</p>
+<p>Of course, there's quite a bit more there to build and manage.</p>
+<h4>Reserved/Custom CloudFront pricing</h4>
+<p>The <a href="https://aws.amazon.com/cloudfront/pricing/">CloudFront pricing page</a> does mention that you can reach out for reserved pricing if you commit to 10TB/month for a year.</p>
+<h3>Requirements</h3>
+<ul>
+<li>Must be within the provider's ToS to support file distribution</li>
+<li>In searching for options, I've seen a few "Unlimited" or "Unmetered" options, but if you look at the fine print, they're not meant for file storage/distribution, and that's not allowed.</li>
+<li>Reasonable file serving redundancy</li>
+<li>I'd like to avoid a single machine for file serving.  I'll probably use S3 as the "source of truth", but I want to avoid downtime in file serving.</li>
+<li>Access logs available</li>
+<li>I need to be able to compile basic download stats on files served (apache style logs or similar).</li>
+</ul>
+<h2>Please Send Feedback/Suggestions!</h2>
+<p>Again, I'm looking for feedback and suggestions for a cheap, reliable file hosting provider.</p>
+<p>Thanks!</p>
+  </div>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/technology/">technology</a>
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/cloud/">cloud</a>
+      
+    </div>
+</article>
+<article style="background-color: rgba(0, 3, 0, 0.03)" class="mt4 ph3 ph6-ns pv4 bt b--light-gray bb">
+    <h1 class="ttu tracked f6">Related</h1>
+    <ul class="list pl0">
+      
+      <li class="pl0">
+        <a href="/posts/2016/03/15/aws-podcast.html" class="link dim near-black db f4 pv2" title="AWS Podcast">
+          AWS Podcast
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2014/02/26/args4j-helpers.html" class="link dim near-black db f4 pv2" title="args4j-helpers">
+          args4j-helpers
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2014/02/14/crucible-survivor-code-review-dashboard.html" class="link dim near-black db f4 pv2" title="Crucible Survivor - a code review dashboard">
+          Crucible Survivor - a code review dashboard
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2011/10/10/the-story-of-hod.html" class="link dim near-black db f4 pv2" title="the story of HOD - ahead of its time, obsolete at launch">
+          the story of HOD - ahead of its time, obsolete at launch
+          <span>›</span>
+        </a>
+      </li>
+      
+    </ul>
+</article>
+            
+  </main>
+  
+  <footer class="pa3 pa4-l black-70 bt b--black-10">
+      <div class="mb4-l cf">
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+          <h4 class="f5 f4-l fw6">Sandwich News</h4>
+          <img width="130" src="http://sandwichnews.org/static/images/ogrodnek2.png" />
+          <span class="pt1 f7 f6-l db black-70">© Larry Ogrodnek 2011-2018.</span>
+        </article>
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pl2 pl0-ns">
+          <h4 class="f5 f4-l fw5">Elsewhere</h4>
+          <p>
+              <li><a href="http://engineers.coffee/">Engineers &amp; Coffee</a></li>
+              <li><a href="http://analogmachines.com/">Analog Machines</a></li>
+              <li><a href="https://github.com/ogrodnek">GitHub</a></li>
+              <li><a href="https://twitter.com/ogrodnek">Twitter</a></li>
+              <li><a href="https://flickr.com/logrodnek">Flickr</a></li>
+            </p>
+        </article>
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+          <h4 class="f5 f4-l fw5">Other stuff</h4>
+          <p>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/rss.xml">RSS</a></li>
+            </p>          
+        </article>
+      </div>
+    </footer>
+</body>
+</html>

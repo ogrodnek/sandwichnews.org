@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sandwich news</title>
+  <link rel="shortcut icon" href="/static/images/sandwich-black.png">	
+  <link rel="stylesheet" href="/static/css/blog.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">  
+	<link rel="alternate" type="application/rss+xml" title="My Blog Feed" href="/rss.xml">
+  <style type="text/css">
+
+   </style>
+</head>
+<body class="w-100 sans-serif bg-white">
+  <main>
+    <div data-name="component" > <!-- style="background-color: #eb6864"> -->
+      <nav class="dt w-100 border-box pa2 ph5-ns">
+         <a class="dtc v-mid white link dim w-25" href="/" title="Home">
+           <img src="/static/images/sandwich-black.png" class="dib w2 h2 br-100" alt="Site Name">
+         </a>
+         <div class="dtc v-mid w-75 tr">
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/technology/" title="Technology">technology</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/technology/" title="Technology">tech 💻</a>           
+
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/photography/" title="Photography">photography</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/photography/" title="Photography">photo 📷</a>
+           
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/sandwich/" title="Sandwiches">sandwiches</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/sandwich/" title="Sandwiches">`wich 🍞</a>
+         </div>
+      </nav>
+  </div>
+  
+<article class="">
+    <header style="background-color: rgba(0, 3, 0, 0.03)"
+    class="aventir ph3 ph4-ns pv1 pv2-ns">
+        <h1 class="f3 fw8 f2-m f1-l mb2">
+          Crucible Survivor - a code review dashboard</h1>
+        <time class="f5 f4-l db fw4 mb4">
+          February 14, 2014
+        </time>
+      </header>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+    <p><img alt="Crucible Survivor Dashboard" src="https://raw.github.com/ogrodnek/crucible-survivor/master/docs/crucible-survivor-small.png" /></p>
+<p>I've talked a lot about the importance of <a href="">code reviews and developer feedback</a></p>
+<p><a href="https://github.com/ogrodnek/crucible-survivor">Crucible Survivor</a> is a Hall of Fame / Hall of Shame dashboard that helps to encourage completing your reviews.</p>
+<p>It integrates with with <a href="https://www.atlassian.com/software/crucible/overview">Crucible</a> (obviously) for code review stats.</p>
+<h2>Scoring</h2>
+<p>The scoring is pretty simple right now.  Each reviewer gets a <em>Fame</em> point for completing a review, and a <em>Shame</em> point for each review they have not yet completed.</p>
+<p>We've had this running for a few months now, and the general thinking is it would be better to have open reviews be more shameful the longer they have been kept open.  Maybe a future improvement.</p>
+<h2>Design / Credits</h2>
+<p>The design is taken from <a href="http://blog.gengo.com/jira-survivor/">Jira Survivor</a>, which itself was forked from <a href="http://99designs.com/tech-blog/blog/2013/01/05/github-survivor/">Github Survivor</a>.</p>
+<h2>Code and Application Architecture</h2>
+<p>The <a href="https://github.com/ogrodnek/crucible-survivor">code</a> is a large departure from the original projects.  The original projects use MongoDB to store data scraped from the github/jira APIs, and a python web app to serve the site.</p>
+<p>Crucible Survivor is an angular app that is mostly static.  The review stats are included in the app as a JS include.  The app is hosted as a static website in S3, with the contents of the stats JS generated periodically by a jenkins server.</p>
+<p>This was a hack-day experiment in 'static' dashboard apps, and I'm really happy with how it came out.  I really like how gathering the content to display is decoupled from the display.  Serving the site requires no server infrastructure, and the update process can be very flexible.  Finally, it's incredible easy to test/run locally -- just generate a fake stats file and open the site.</p>
+<h3>Grab the code, get it running!</h3>
+<p>The code is <a href="https://github.com/ogrodnek/crucible-survivor">open sourced, and available on github</a> along with instructions on configuring, running, developing.</p>
+<p>I'd love to hear any feedback or comments.</p>
+  </div>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/technology/">technology</a>
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/code/">code</a>
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/scala/">scala</a>
+      
+    </div>
+</article>
+<article style="background-color: rgba(0, 3, 0, 0.03)" class="mt4 ph3 ph6-ns pv4 bt b--light-gray bb">
+    <h1 class="ttu tracked f6">Related</h1>
+    <ul class="list pl0">
+      
+      <li class="pl0">
+        <a href="/posts/2016/03/16/pushing-bytes-is-expensive.html" class="link dim near-black db f4 pv2" title="Pushing bytes is expensive">
+          Pushing bytes is expensive
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2016/03/15/aws-podcast.html" class="link dim near-black db f4 pv2" title="AWS Podcast">
+          AWS Podcast
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2014/02/26/args4j-helpers.html" class="link dim near-black db f4 pv2" title="args4j-helpers">
+          args4j-helpers
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2013/02/15/reader-driven-development.html" class="link dim near-black db f4 pv2" title="Reader Driven Development">
+          Reader Driven Development
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2012/06/13/golden-rule-of-programming-style.html" class="link dim near-black db f4 pv2" title="The golden rule of programming style">
+          The golden rule of programming style
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2012/03/13/on-code-reviews-and-developer-feedback.html" class="link dim near-black db f4 pv2" title="On Code Reviews and Developer Feedback">
+          On Code Reviews and Developer Feedback
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2011/10/10/the-story-of-hod.html" class="link dim near-black db f4 pv2" title="the story of HOD - ahead of its time, obsolete at launch">
+          the story of HOD - ahead of its time, obsolete at launch
+          <span>›</span>
+        </a>
+      </li>
+      
+    </ul>
+</article>
+            
+  </main>
+  
+  <footer class="pa3 pa4-l black-70 bt b--black-10">
+      <div class="mb4-l cf">
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+          <h4 class="f5 f4-l fw6">Sandwich News</h4>
+          <img width="130" src="http://sandwichnews.org/static/images/ogrodnek2.png" />
+          <span class="pt1 f7 f6-l db black-70">© Larry Ogrodnek 2011-2018.</span>
+        </article>
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pl2 pl0-ns">
+          <h4 class="f5 f4-l fw5">Elsewhere</h4>
+          <p>
+              <li><a href="http://engineers.coffee/">Engineers &amp; Coffee</a></li>
+              <li><a href="http://analogmachines.com/">Analog Machines</a></li>
+              <li><a href="https://github.com/ogrodnek">GitHub</a></li>
+              <li><a href="https://twitter.com/ogrodnek">Twitter</a></li>
+              <li><a href="https://flickr.com/logrodnek">Flickr</a></li>
+            </p>
+        </article>
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+          <h4 class="f5 f4-l fw5">Other stuff</h4>
+          <p>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/rss.xml">RSS</a></li>
+            </p>          
+        </article>
+      </div>
+    </footer>
+</body>
+</html>

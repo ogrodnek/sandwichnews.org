@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sandwich news</title>
+  <link rel="shortcut icon" href="/static/images/sandwich-black.png">	
+  <link rel="stylesheet" href="/static/css/blog.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">  
+	<link rel="alternate" type="application/rss+xml" title="My Blog Feed" href="/rss.xml">
+  <style type="text/css">
+
+   </style>
+</head>
+<body class="w-100 sans-serif bg-white">
+  <main>
+    <div data-name="component" > <!-- style="background-color: #eb6864"> -->
+      <nav class="dt w-100 border-box pa2 ph5-ns">
+         <a class="dtc v-mid white link dim w-25" href="/" title="Home">
+           <img src="/static/images/sandwich-black.png" class="dib w2 h2 br-100" alt="Site Name">
+         </a>
+         <div class="dtc v-mid w-75 tr">
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/technology/" title="Technology">technology</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/technology/" title="Technology">tech 💻</a>           
+
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/photography/" title="Photography">photography</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/photography/" title="Photography">photo 📷</a>
+           
+           <a class="link underline-hover black f5 f4-ns dn dib-l mr3 mr3-ns" href="/tag/sandwich/" title="Sandwiches">sandwiches</a>
+           <a class="link underline-hover black f5 f4-ns dib dn-l mr3 mr3-ns" href="/tag/sandwich/" title="Sandwiches">`wich 🍞</a>
+         </div>
+      </nav>
+  </div>
+  
+<article class="">
+    <header style="background-color: rgba(0, 3, 0, 0.03)"
+    class="aventir ph3 ph4-ns pv1 pv2-ns">
+        <h1 class="f3 fw8 f2-m f1-l mb2">
+          On Code Reviews and Developer Feedback</h1>
+        <time class="f5 f4-l db fw4 mb4">
+          March 13, 2012
+        </time>
+      </header>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+    <p>There's a great post from last week at 37signals, <a href="http://37signals.com/svn/posts/3124-give-it-five-minutes">Give it five minutes</a>:</p>
+<blockquote>
+<p>While he was making his points on stage, I was taking an inventory of the things I didn’t agree with. 
+And when presented with an opportunity to speak with him, I quickly pushed back at some of his ideas. I must have seemed like such an asshole. </p>
+<p>His response changed my life. It was a simple thing. He said “Man, give it five minutes.” I asked him what he meant by that? He said, it’s fine to disagree, 
+it’s fine to push back, it’s great to have strong opinions and beliefs, but give my ideas some time to set in before you’re sure you want to argue against them. 
+“Five minutes” represented “think”, not react. He was totally right. I came into the discussion looking to prove something, not learn something. </p>
+<p>There’s also a difference between asking questions and pushing back. Pushing back means you already think you know. Asking questions means you want to know. Ask more questions.</p>
+</blockquote>
+<p>This is such a great outlook and a great way to approach the discussion of feedback for code reviews and design reviews. </p>
+<p>It's surprising how little time development teams devote to training, or even internal discussion on effective feedback.  As developers, we are constantly engaged in this kind of communication: white-boarding sessions, spec reviews, design reviews, code reviews.  We're expected to give and receive feedback on a daily basis, but few of us are properly prepared for it.  Not only do we lack the training, but we have many negative examples to draw from.  Who hasn't been a part of a design review where tempers flare?  Properly giving feedback is something that requires constant attention and practice.  Receiving feedback can be just as difficult. </p>
+<h3>Culture of Communication</h3>
+<p>One of the major pillars of our 
+<a href="">engineering culture at bizo</a> is "the 3 Cs": Communication, Communication, Communication. </p>
+<p>We've tried hard to build a team of engineers that are eager to receive feedback, humble about their abilities, objective and gracious with their feedback, and freely giving of their own knowledge and experience.  We see communication as a prerequisite for building a world-class team and developing high-quality code. You often hear the phrase "
+<a href="http://bobsutton.typepad.com/my_weblog/2006/07/strong_opinions.html">strong opinions, weakly held</a>," and that is the kind of culture we have tried to build. </p>
+<p>Communication is hard.  It takes real team agreement and commitment to continued work to keep this culture alive and well. It's important the team views effective communication as important and that the culture supports it. </p>
+<h3>Code Reviews</h3>
+<p>Code reviews are something that can easily be approached from the wrong perspective, both as an author or reviewer. </p>
+<p>As a reviewer, it can be easy to jump in and argue, to try and push 'your' solution (even though it may be equivalent), to push back instead of asking questions and trying to understand. </p>
+<p>As an author, it's far too easy to get attached to your code, to your specific solution/naming/etc.  It's also easy to feel like each comment is an attack on your ability, and that by accepting the feedback, this somehow means that you were wrong or did a bad job.  Of course, nothing could be further from the truth! </p>
+<p>At Bizo, we perform code reviews for every change.  They are a major part of our culture of communication.  In order to perform effective code reviews, it's important to have some shared guidelines that help support effective communication. </p>
+<p>Here are some guidelines we've found to be helpful for performing code reviews: </p>
+<h3>What is a code review</h3>
+<ul>
+<li>
+<p>A careful line-by-line critique of code by peers</p>
+</li>
+<li>
+<p>Happens in a non-threatening context</p>
+</li>
+<li>
+<p>Goal is cooperation and mutual learning, not fault finding</p>
+</li>
+</ul>
+<p>Code reviews are a team exercise to improve understanding and make the code better! </p>
+<p>When people think of code reviews they usually think of catching bugs.  Code reviews do occasionally catch bugs or potential performance problems, but this is rare.</p>
+<p>Just as important is fostering a shared understanding of the code and exposure to new approaches, techniques, and patterns.  Seeing how your peers program is a great way to learn from them.</p>
+<p>Ensuring coding standards and style guides is another way code reviews help.  Working on a team it's important to keep readability and quality high using a shared vocabulary. </p>
+<h4>As an author</h4>
+<p>As an author, it's important to view each comment as a new opportunity to improve your code.  Instead of jumping into defense mode, take a step back and think.  Try to approach the code again for the first time with this new perspective.  Your team has a lot of experience and varied backgrounds -- draw from them!  They are there to help you.  Use the gift of their experience and knowledge to improve the code.</p>
+<p>Trust the team, and view all comments as action items.  Some changes can seem arbitrary, especially when it comes to naming and organization.  Unless there's a strong reason, tend to agree with your reviewers.  If a reviewer finds something confusing, it is confusing!  Code spends most of its life in maintenance and programming is a team sport.  Remember that they are your audience, and you want them to be able to understand your code at 4am after a system crash. </p>
+<h4>As a reviewer</h4>
+<p>As a reviewer, it's important to take the time to understand the code, think, and ask questions to understand the code before providing feedback.  The author probably spent a lot more time thinking about the problem and the approach over the course of the project.</p>
+<p>Be strict on coding standard and style guide violations.  The real cost of software is maintenance (
+<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-139411.html#16712">80% according to Sun</a>).  It's important the code is easily understood by the team.</p>
+<p>Be gentle on personal preferences.  If it's not a standard violation and just a matter of personal preference, defer to the author.  It's okay to present your perspective, but mention that it's just a preference and not meant to be taken as an action item.</p>
+<p>Trust the author.  It's often the case that there are many valid approaches to a problem.  It's great to present alternative approaches and discuss pros/cons of various approaches.  If you see alternative solutions, bring them up!  When discussing alternatives, make sure to listen to the author.  Remember they are the subject matter expert and you are working together on the same team. </p>
+<h4>It takes work!</h4>
+<p>Communication is hard!  It's easy to screw-up.  It's easy to go into attack or defense mode when you're passionate about what you're doing.  It's really something we all need to remind ourselves to work on every day.  It's something we need to periodically remind ourselves as a team.  Try to view each review as an opportunity to practice these guidelines.  Just remember to take a step back, think, and ask questions.</p>
+  </div>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/feedback/">feedback</a>
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/code/">code</a>
+      
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="/tag/programming/">programming</a>
+      
+    </div>
+</article>
+<article style="background-color: rgba(0, 3, 0, 0.03)" class="mt4 ph3 ph6-ns pv4 bt b--light-gray bb">
+    <h1 class="ttu tracked f6">Related</h1>
+    <ul class="list pl0">
+      
+      <li class="pl0">
+        <a href="/posts/2014/02/26/args4j-helpers.html" class="link dim near-black db f4 pv2" title="args4j-helpers">
+          args4j-helpers
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2014/02/14/crucible-survivor-code-review-dashboard.html" class="link dim near-black db f4 pv2" title="Crucible Survivor - a code review dashboard">
+          Crucible Survivor - a code review dashboard
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2013/02/15/reader-driven-development.html" class="link dim near-black db f4 pv2" title="Reader Driven Development">
+          Reader Driven Development
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2012/06/13/golden-rule-of-programming-style.html" class="link dim near-black db f4 pv2" title="The golden rule of programming style">
+          The golden rule of programming style
+          <span>›</span>
+        </a>
+      </li>
+      
+      <li class="pl0">
+        <a href="/posts/2011/10/10/the-story-of-hod.html" class="link dim near-black db f4 pv2" title="the story of HOD - ahead of its time, obsolete at launch">
+          the story of HOD - ahead of its time, obsolete at launch
+          <span>›</span>
+        </a>
+      </li>
+      
+    </ul>
+</article>
+            
+  </main>
+  
+  <footer class="pa3 pa4-l black-70 bt b--black-10">
+      <div class="mb4-l cf">
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+          <h4 class="f5 f4-l fw6">Sandwich News</h4>
+          <img width="130" src="http://sandwichnews.org/static/images/ogrodnek2.png" />
+          <span class="pt1 f7 f6-l db black-70">© Larry Ogrodnek 2011-2018.</span>
+        </article>
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pl2 pl0-ns">
+          <h4 class="f5 f4-l fw5">Elsewhere</h4>
+          <p>
+              <li><a href="http://engineers.coffee/">Engineers &amp; Coffee</a></li>
+              <li><a href="http://analogmachines.com/">Analog Machines</a></li>
+              <li><a href="https://github.com/ogrodnek">GitHub</a></li>
+              <li><a href="https://twitter.com/ogrodnek">Twitter</a></li>
+              <li><a href="https://flickr.com/logrodnek">Flickr</a></li>
+            </p>
+        </article>
+        <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+          <h4 class="f5 f4-l fw5">Other stuff</h4>
+          <p>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/rss.xml">RSS</a></li>
+            </p>          
+        </article>
+      </div>
+    </footer>
+</body>
+</html>

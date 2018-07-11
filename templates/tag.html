@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+<header style="background-color: rgba(0, 3, 0, 0.03)"
+class="aventir ph3 ph4-ns pv1 pv2-ns">
+    <h1 class="f4 fw8 f3-m f2-l mb2">
+      {{ tag | title }}
+    </h1>
+    {% include "cat/_%s.html" % tag ignore missing %}
+  </header>
+    {% with pages=pages  %}
+        {% include "_list.html" %}
+    {% endwith %}
+</article>
+{% endblock content %}

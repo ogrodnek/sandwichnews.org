@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="">
+    <header style="background-color: rgba(0, 3, 0, 0.03)"
+    class="aventir ph3 ph4-ns pv1 pv2-ns">
+        <h1 class="f3 fw8 f2-m f1-l mb2">
+          {{ page.title }}</h1>
+        <time class="f5 f4-l db fw4 mb4">
+          {{ page.date.strftime("%B %-d, %Y") }}
+        </time>
+      </header>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+    {{ page.html|safe }}
+  </div>
+  <div class="ph3 center serif pt2 measure-wide lh-copy f4">
+      {% for tag in page.tags %}
+         <a class="f4 link dim br1 ba ph3 pv2 mb2 dib black"
+         href="{{ url_for('tag', tag=tag) }}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+</article>
+<article style="background-color: rgba(0, 3, 0, 0.03)" class="mt4 ph3 ph6-ns pv4 bt b--light-gray bb">
+    <h1 class="ttu tracked f6">Related</h1>
+    <ul class="list pl0">
+      {% for page in related %}
+      <li class="pl0">
+        <a href="{{ url_for('page', path=page.path) }}" class="link dim near-black db f4 pv2" title="{{ page.title }}">
+          {{ page.title }}
+          <span>›</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+</article>
+{% endblock content %}
