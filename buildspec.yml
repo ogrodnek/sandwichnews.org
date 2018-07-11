@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+
+  build:
+    commands:
+      - python blog.py
+
+  post_build:
+    commands:
+      - bash ./deploy.sh
+
+artifacts:
+  base-directory: build
+  files: '**/*'
