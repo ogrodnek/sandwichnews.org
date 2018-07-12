@@ -4,10 +4,12 @@ phases:
   pre_build:
     commands:
       - pip install -r requirements.txt
+      - apt-get update && apt-get install -y jpegoptim
 
   build:
     commands:
       - python blog.py build
+      - find build -name *.jpg -exec jpegoptim -m 85 {} \;
 
   post_build:
     commands:
