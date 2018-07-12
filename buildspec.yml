@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - python blog.py build
-      - find build -name *.jpg -exec jpegoptim -m 85 {} \;
+      - find build -name *.jpg -exec jpegoptim -m85 {} \;
 
   post_build:
     commands:
