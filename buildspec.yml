@@ -10,6 +10,7 @@ phases:
     commands:
       - python blog.py build
       - find build -name *.jpg -exec jpegoptim -m85 {} \;
+      - find build -name *.jpg -exec mogrify -verbose -resize 2048x2048 {} \;
 
   post_build:
     commands:
