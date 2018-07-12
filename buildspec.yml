@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - pip install -r requirements.txt
-      - apt-get update && apt-get install -y jpegoptim
+      - apt-get update && apt-get install -y jpegoptim npm
       - npm install -g html-minifier
 
   build:
