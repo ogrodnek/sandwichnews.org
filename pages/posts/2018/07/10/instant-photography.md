@@ -1,6 +1,6 @@
 title: Instant Photography
 date: 2018-07-10T13:45:00
-tags: [photography]
+tags: [photography, instax]
 photo: /static/images/posts/2018/07/10/instax.jpg
 
 
