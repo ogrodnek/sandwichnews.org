@@ -1,14 +1,14 @@
 title: New Photo Portfolio Site
 date: 2016-01-09T16:37:00
 tags: [photography]
-photo: http://photos.ogrodnek.com/static/photos/postcards-seattle/women-pier-thumb-375x375.jpg
+photo: https://photos.ogrodnek.com/static/photos/postcards-seattle/women-pier-thumb-375x375.jpg
 
-![](http://photos.ogrodnek.com/static/photos/postcards-seattle/women-pier-thumb-375x375.jpg)
+![](https://photos.ogrodnek.com/static/photos/postcards-seattle/women-pier-thumb-375x375.jpg)
 
 I still post new photos to [my account on Flickr](https://www.flickr.com/photos/logrodnek/), but I've been wanting
 to put together a site with an organized, curated set of my favorite photos.
 
-I finally got around to it: [photos.ogrodnek.com](http://photos.ogrodnek.com)
+I finally got around to it: [photos.ogrodnek.com](https://photos.ogrodnek.com)
 
 I wanted it to be clean, simple, look good on mobile, and FAST, and I think I'm off to a pretty good start.
 
