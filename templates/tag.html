@@ -9,7 +9,7 @@ class="aventir ph3 ph4-ns pv1 pv2-ns">
     </h1>
     {% include "cat/_%s.html" % tag ignore missing %}
   </header>
-    {% with pages=pages  %}
+    {% with pages=pages, post_limit=50  %}
         {% include "_list.html" %}
     {% endwith %}
 </article>

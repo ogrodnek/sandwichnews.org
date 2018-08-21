@@ -11,7 +11,7 @@
       {% endfor %}
     </ul> -->
     <div class="ph5">
-    {% for page in pages[:5] %}
+    {% for page in pages[:post_limit] %}
     <article class="bt bb b--black-10">
       <a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ url_for("page", path=page.path) }}">
         <div class="flex flex-column flex-row-ns">

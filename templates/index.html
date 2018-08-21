@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% with pages=pages  %}
+    {% with pages=pages, post_limit=5  %}
         {% include "_list.html" %}
     {% endwith %}
     <link rel="stylesheet" href="https://unpkg.com/tachyons-columns@1.0.5/css/tachyons-columns.min.css" />
