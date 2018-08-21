@@ -3,8 +3,8 @@ date: 2016-03-15T16:47:00
 tags: [photography, seattle]
 photo: http://photos.ogrodnek.com/static/photos/pike-place/umbrella-thumb-375x375.jpg
 
-<a href="http://photos.ogrodnek.com/p/pike-place/">
-  <img class="img-responsive" src="http://photos.ogrodnek.com/static/photos/pike-place/umbrella-thumb-375x375.jpg" />
+<a href="https://photos.ogrodnek.com/p/pike-place/">
+  <img class="img-responsive" src="https://photos.ogrodnek.com/static/photos/pike-place/umbrella-thumb-375x375.jpg" />
 </a>
 
 I just finished my final project for Black and White Photo II at [PCNW](http://pcnw.org).
