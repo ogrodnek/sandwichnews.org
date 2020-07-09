@@ -1,6 +1,6 @@
 title: The golden rule of programming style
 date: 2012-06-13T12:00:00
-tags: [feedback,code,programming]
+tags: [technology,feedback,code,programming]
 
 There's an interesting page on the subject of [compilation units per file](http://docs.scala-lang.org/style/files.html) over at the 
 [scala style guide](http://docs.scala-lang.org/style/overview.html). 

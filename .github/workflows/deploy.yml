@@ -1,0 +1,31 @@
+name: deploy
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
+      - name: build
+        run: |
+          pip install -r requirements.txt
+          python blog.py build
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./build/ s3://sandwichnews.org --exclude "*.jpg" --cache-control max-age=900
+          aws s3 sync ./build/ s3://sandwichnews.org --include "*.jpg" --cache-control max-age=7200
+
+      - name: Invalidate Cloudfront
+        run: aws cloudfront create-invalidation --distribution-id E12B42DU84I3C --paths '/*'

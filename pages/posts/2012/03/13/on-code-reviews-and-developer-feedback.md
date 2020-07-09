@@ -1,7 +1,6 @@
 title: On Code Reviews and Developer Feedback
 date: 2012-03-13T12:00:00
-tags: [feedback,code,programming]
-
+tags: [technology,feedback,code,programming]
 
 There's a great post from last week at 37signals, [Give it five minutes](http://37signals.com/svn/posts/3124-give-it-five-minutes):
 

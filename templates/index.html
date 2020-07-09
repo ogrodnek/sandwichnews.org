@@ -1,23 +1,28 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %} {% with pages=pages, post_limit=7
+%} {% include "_list.html" %} {% endwith %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons-columns@1.0.5/css/tachyons-columns.min.css"
+/>
 
-{% block content %}
-    {% with pages=pages, post_limit=5  %}
-        {% include "_list.html" %}
-    {% endwith %}
-    <link rel="stylesheet" href="https://unpkg.com/tachyons-columns@1.0.5/css/tachyons-columns.min.css" />
-
-    <article style="background-color: rgba(0, 3, 0, 0.03)" class="mt4 ph3 ph6-ns pv4 bt b--light-gray bb">
-        <h1 class="ttu tracked f6">Tags</h1>
-        <ul class="cc0 cc3-l cc2-m list pl0">
-          {% for tag in tags %}
-          <li class="pl0">
-            <a href="{{ url_for('tag', tag=tag) }}" class="link dim near-black db f4 pv2" title="Growing up with Dogma">
-              {{ tag }}
-              <span>›</span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-    </article>      
+<article
+  style="background-color: rgba(0, 3, 0, 0.03);"
+  class="mt4 ph3 ph6-ns pv4 bt b--light-gray bb"
+>
+  <h1 class="ttu tracked f6">Tags</h1>
+  <ul class="cc0 cc3-l cc2-m list pl0">
+    {% for tag in tags %}
+    <li class="pl0">
+      <a
+        href="{{ url_for('tag', tag=tag) }}"
+        class="link dim near-black db f4 pv2"
+        title="Growing up with Dogma"
+      >
+        {{ tag }}
+        <span>›</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</article>
 {% endblock content %}
-

@@ -1,33 +1,21 @@
-<!--  
-  <ul class="list pl0">
-  {% for page in pages %}
-      <li class="pa3 pa4-ns bb b--black-10">
-        <b class="db mb1 f1 lh-title">{{ page.title }}</b>
-        <span class="f5 db lh-copy measure">
- {{page.html|truncate(500)|safe}}
-          </span>           
-          
-      </li>r
-      {% endfor %}
-    </ul> -->
-    <div class="ph5">
-    {% for page in pages[:post_limit] %}
-    <article class="bt bb b--black-10">
-      <a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ url_for("page", path=page.path) }}">
-        <div class="flex flex-column flex-row-ns">
-          <div class="pr3-ns mb4 mb0-ns w-100 w-20-ns">
-            {% if page.photo %}
-            <img src="{{ page.photo }}" />
-             {% endif %}
-          </div>
-          <div class="w-100 w-60-ns pl3-ns">
-            <h1 class="f2 fw3 mt0 lh-title">{{ page.title }}</h1>
-            <p class="f6 f5-l lh-copy">
-              {{ page.date.strftime("%b %-d, %Y") }}
-            </p>
-          </div>
-        </div>
-      </a>
-    </article>  
-    {% endfor %}
+<div class="ph5">
+{% for page in pages[:post_limit] %}
+<article class="bt bb b--black-10">
+  <a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ url_for("page", path=page.path) }}">
+    <div class="flex flex-column flex-row-ns">
+      <div class="pr3-ns mb4 mb0-ns w-100 w-20-ns">
+        {% if page.photo %}
+        <img src="{{ page.photo }}" />
+          {% endif %}
+      </div>
+      <div class="w-100 w-60-ns pl3-ns">
+        <h1 class="f2 fw3 mt0 lh-title">{{ page.title }}</h1>
+        <p class="f6 f5-l lh-copy">
+          {{ page.date.strftime("%b %-d, %Y") }}
+        </p>
+      </div>
     </div>
+  </a>
+</article>  
+{% endfor %}
+</div>

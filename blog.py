@@ -3,11 +3,17 @@ import sys
 from flask import Flask, render_template
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
+from mdx_imagecaption import ImageCaptionExtension
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
-FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'imagecaption']
+FLATPAGES_EXTENSION_CONFIGS = {
+    'codehilite': {},
+    'fenced_code': {},
+}
+
+FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code',  ImageCaptionExtension()]
 
 app = Flask(__name__)
 app.config.from_object(__name__)

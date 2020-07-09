@@ -1,5 +1,4 @@
-flask
-flask_flatpages
-Frozen-Flask
-
-
+Flask==1.1.2
+Flask-FlatPages==0.7.2
+Frozen-Flask==0.15
+Markdown==3.2.2
