@@ -15,7 +15,7 @@ class ImageCaptionExtension(Extension):
 
 class ImageCaptionTreeprocessor(Treeprocessor):
     def run(self, root):
-        for i, p in enumerate(root.getchildren()):
+        for i, p in enumerate(list(root)):
           if p.tag == 'img' and 'alt' in p.attrib:
             elem = root.makeelement('figure', {})
             root[i] = elem
