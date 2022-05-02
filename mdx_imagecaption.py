@@ -1,6 +1,6 @@
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
-from markdown.util import etree
+from xml.etree import ElementTree
 
 class ImageCaptionExtension(Extension):
     def __init__(self, configs=[]):
@@ -20,7 +20,7 @@ class ImageCaptionTreeprocessor(Treeprocessor):
             elem = root.makeelement('figure', {})
             root[i] = elem
             elem.append(p)
-            caption = etree.SubElement(elem, 'figcaption')
+            caption = ElementTree.SubElement(elem, 'figcaption')
             caption.text = p.attrib['alt']
           self.run(p)
 
