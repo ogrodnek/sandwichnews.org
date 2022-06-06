@@ -25,6 +25,10 @@ pre {
 	margin-bottom: 25px;
 }
 
+code {
+	font-size: medium;
+}
+
 li {
 	margin-top: 5px;
 }
