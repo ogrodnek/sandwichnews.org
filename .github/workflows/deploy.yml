@@ -31,8 +31,8 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync ./build/ s3://sandwichnews.org --exclude "*.jpg" --cache-control max-age=900
-          aws s3 sync ./build/ s3://sandwichnews.org --include "*.jpg" --cache-control max-age=7200
+          aws s3 sync ./build/ s3://sandwichnews.org --checksum --exclude "*.jpg" --cache-control max-age=900
+          aws s3 sync ./build/ s3://sandwichnews.org --checksum --include "*.jpg" --cache-control max-age=7200
 
       - name: Invalidate Cloudfront
         run: aws cloudfront create-invalidation --distribution-id E12B42DU84I3C --paths '/*'
