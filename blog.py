@@ -1,8 +1,9 @@
 import sys
 
 from flask import Flask, render_template
-from flask_flatpages import FlatPages
+from flask_flatpages import FlatPages, Page
 from flask_frozen import Freezer
+
 from mdx_imagecaption import ImageCaptionExtension
 
 DEBUG = True
@@ -22,8 +23,8 @@ freezer = Freezer(app)
 
 
 @app.route("/")
-def index():
-    tags = set()
+def index() -> str:
+    tags: set[str] = set()
     for p in pages:
         for t in p.meta.get("tags", []):
             tags.add(t)
@@ -35,7 +36,7 @@ def index():
 
 
 @app.route("/rss.xml")
-def rss():
+def rss() -> tuple[str, int, dict[str, str]]:
     latest = sorted(pages, reverse=True, key=lambda p: str(p.meta["date"]))
     return (
         render_template("rss.xml", posts=latest),
@@ -45,16 +46,16 @@ def rss():
 
 
 @app.route("/tag/<string:tag>/")
-def tag(tag):
+def tag(tag: str) -> str:
     _tagged = [p for p in pages if tag in p.meta.get("tags", [])]
     tagged = sorted(_tagged, key=lambda p: p.meta["date"], reverse=True)
 
     return render_template("tag.html", pages=tagged, tag=tag)
 
 
-def related(page):
-    def find():
-        rel = {}
+def related(page: Page) -> list[Page]:
+    def find() -> dict[str, Page]:
+        rel: dict[str, Page] = {}
         for p in pages:
             if p.path == page.path:
                 continue
@@ -69,7 +70,7 @@ def related(page):
 
 
 @app.route("/<path:path>.html")
-def page(path):
+def page(path: str) -> str:
     page = pages.get_or_404(path)
     r = related(page)
 
