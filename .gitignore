@@ -3,6 +3,12 @@ build/
 .DS_Store
 *.pyc
 .venv
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.ruff_cache/
+uv.lock
 
 
 
