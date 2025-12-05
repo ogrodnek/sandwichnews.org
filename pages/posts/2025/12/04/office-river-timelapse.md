@@ -1,6 +1,6 @@
 title: Office River Timelapse
 date: 2025-12-04T18:24:34
-tags: [technology, timelapse, office, river, aws, photography]
+tags: [technology, timelapse, river, aws, photography]
 photo: /static/images/posts/2025/12/04/river-timelapse.jpeg
 
 I was wondering why one of my AWS accounts had almost 1TB of data in S3. Turns out I never cleaned up the images from [Shipping News](https://shippingnews.xyz/about) -- a project where I captured a photo every 30 seconds from my office window, saved it to S3, and ran image recognition to detect boats passing by on the Hudson.
