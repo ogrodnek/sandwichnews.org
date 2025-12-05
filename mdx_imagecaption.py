@@ -38,9 +38,7 @@ class ImageCaptionTreeprocessor(Treeprocessor):
 
 
 class VideoCaptionPostprocessor(Postprocessor):
-    VIDEO_PATTERN = re.compile(
-        r'<video([^>]*)\stitle="([^"]+)"([^>]*)></video>'
-    )
+    VIDEO_PATTERN = re.compile(r'<video([^>]*)\stitle="([^"]+)"([^>]*)></video>')
 
     def run(self, text: str) -> str:
         def replace_video(match: re.Match[str]) -> str:
